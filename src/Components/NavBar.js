@@ -9,6 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '../Photos/logo1.png';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
 const pages = ['浪與不浪', '狗狗小知識', '關於我們'];
 const settings = ['Profile', 'Account', 'Dashboard'];
@@ -26,6 +28,11 @@ const handleCloseNavMenu = () => {
 const handleCloseUserMenu = () => {
     setAnchorElUser(null);
 };
+// const theme = createTheme({
+//     status: {
+//     danger: orange[500],
+//     },
+// });
 
 return (
     <AppBar position="static">
@@ -37,7 +44,7 @@ return (
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
         >
-            浪與不浪
+        <img src={Logo} alt="Logo"/>
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -81,7 +88,7 @@ return (
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
         >
-            浪與不浪
+            <img src={Logo} alt="Logo"/>
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
